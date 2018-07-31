@@ -1,0 +1,66 @@
+<% include ./header %>
+
+<!-- 引入 富文本编辑器 -->
+<script src="/ueditor/ueditor.config.js"></script>
+<script src="/ueditor/ueditor.all.min.js"></script>
+
+<!-- 路径导航 -->
+<ol class="breadcrumb">
+    <li>
+        <a href="#">文章管理</a>
+    </li>
+    <li class="active">添加友情链接</li>
+</ol>
+<!-- 路径导航 END -->
+
+<!-- 发布文章 -->
+<div class="container articleAdd">
+   <div class="row">
+        <div class="col-md-2">
+            <img class="editArticleImg" src="/<%= data.linkimgurl%>" style="margin-top: 10px;">
+        </div>
+        <div class="col-md-2">
+            <!-- 修改图片 -->
+            <form action="/admin/linkUpdateImage" method="POST" enctype="multipart/form-data">
+                <!-- 传给 控制器 做修改哪一条文章的条件 -->
+                <input type="hidden" value="<%=data._id%>" name="_id">
+                修改图片：
+                <input type="file" name="linkimgurl">
+                <input type="submit" value="确认修改图片" style="margin-top: 10px;">
+            </form>
+            <!-- 修改图片 end -->
+        </div>
+   </div>
+   <div class="row">
+       <form action="/admin/linkUpdate" method="POST">
+       <input type="hidden" value="<%=data._id%>" name="_id">
+       <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon">友链名称</span>
+                <input type="text" class="form-control" name="linkname" value="<%=data.linkname%>">
+            </div>
+       </div>
+       <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon">友链描述</span>
+                <input type="text" class="form-control" name="description" value="<%=data.description%>">
+            </div>
+       </div>
+       <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon">友链地址</span>
+                <input type="text" class="form-control" name="linkadd" value="<%=data.linkadd%>">
+            </div>
+       </div>
+       <div class="col-md-6">
+            <input class="reset" type="reset">
+       </div>
+       <div class="col-md-6">
+            <input class="submit" type="submit">
+       </div>
+    </form>
+    </div>
+</div>
+
+
+<% include ./footer %>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Unicorn Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstarp-css -->
+<link href="../show/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstarp-css -->
+<!-- css -->
+<link rel="stylesheet" href="../show/css/style.css" type="text/css" media="all" />
+<!--// css -->
+<script src="../show/js/jquery-1.11.0.min.js"></script>
+<!--fonts-->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<!--/fonts-->
+<!-- start-smoth-scrolling-->
+<script type="text/javascript" src="../show/js/move-top.js"></script>
+<script type="text/javascript" src="../show/js/easing.js"></script>
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+<!--start-smoth-scrolling-->
+</head>
+<body>
+    <!-- banner -->
+    <% data.forEach(function(val){ %>
+	<div class="banner" id="home" style="background:url(/<%=val.imgurl%>)">
+        <!-- container -->
+		<div class="container">
+			<div class="header">
+				<div class="head-logo">
+					<a href=""><img src="../show/images/logo.png" alt="" /></a>
+				</div>
+				<div class="header-info-right">
+					<div class="header cbp-spmenu-push">
+						<!--script-nav -->	
+						<script>
+							$("span.menu").click(function(){
+								$("ul.navigatoin").slideToggle("300" , function(){
+								});
+							});
+						</script>
+						<script type="text/javascript">
+									jQuery(document).ready(function($) {
+										$(".scroll").click(function(event){		
+											event.preventDefault();
+											$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+										});
+									});
+						</script>
+						<div class="clearfix"> </div>
+							<!-- /script-nav -->
+										<div class="main">
+											<section class="buttonset">
+												<button id="showRightPush"><img src="../show/images/menu.png" /></button>
+											</section>
+										</div>
+										<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+										<script src="../show/js/classie.js"></script>
+										<script>
+											var	menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+												showRightPush = document.getElementById( 'showRightPush' ),
+												body = document.body;
+								
+											showRightPush.onclick = function() {
+												classie.toggle( this, 'active' );
+												classie.toggle( body, 'cbp-spmenu-push-toleft' );
+												classie.toggle( menuRight, 'cbp-spmenu-open' );
+												disableOther( 'showRightPush' );
+											};
+										</script>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+        </div>
+		<!-- //container -->
+		<div class="container">
+			<div class="banner-info">
+					<h2 style="color:aqua"><%= val.title%></h2>
+					<span></span>
+					<p id="change_color"><%- val.content%></p>
+					<div class="bnr-btn">
+						<a href="#" class="hvr-bounce-to-right">赞👍</a>
+					</div>
+			</div>
+		</div>
+    </div>
+    <% })%>
+	<!--//banner-->
+	<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>	
+	</div>
+	<!--footer-ends-->
+</body>
+</html>

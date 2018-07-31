@@ -1,0 +1,51 @@
+<% include ../admin/header %>
+
+    <!-- 路径导航 -->
+    <ol class="breadcrumb">
+        <li>
+            <a href="#">测试模版</a>
+        </li>
+        <li class="active">添加管理员</li>
+    </ol>
+    <!-- 路径导航 END -->
+
+    <!-- 表单 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+
+                <form action="/test/adminInsert" class="userForm" method="POST">
+                    <div class="input-group">
+                        <span class="input-group-addon">用户</span>
+                        <input type="text" class="form-control" name="username">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">密码</span>
+                        <input type="password" class="form-control" name="password">
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">电话</span>
+                        <input type="text" class="form-control" name="tel">
+                    </div>
+                    <div class="input-group">
+                    <select class="input-group" name="userpass">
+                        <option value="1" class="form-password form-control" id="form-password">管理员</option>
+                        <option value="2" class="form-password form-control" id="form-password">超级管理员</option>
+                    </select>
+                </div>
+                    <div class="input-group">
+                        <input type="submit" value="添加管理员">
+                    </div>
+                </form>
+
+
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+    </div>
+    <!-- 表单 end -->
+
+<% include ../admin/footer %>

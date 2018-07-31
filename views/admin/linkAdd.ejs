@@ -1,0 +1,55 @@
+<% include ./header %>
+
+<!-- 引入 富文本编辑器 -->
+<script src="/ueditor/ueditor.config.js"></script>
+<script src="/ueditor/ueditor.all.min.js"></script>
+
+<!-- 路径导航 -->
+<ol class="breadcrumb">
+    <li>
+        <a href="#">文章管理</a>
+    </li>
+    <li class="active">添加友情链接</li>
+</ol>
+<!-- 路径导航 END -->
+
+<!-- 发布文章 -->
+<div class="container articleAdd">
+   <div class="row">
+       <form action="linkInsert" method="POST" enctype="multipart/form-data">
+       <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon">友链名称</span>
+                <input type="text" class="form-control" name="linkname">
+            </div>
+       </div>
+       <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon">友链描述</span>
+                <input type="text" class="form-control" name="description">
+            </div>
+       </div>
+       <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon">友链封面</span>
+                <input type="file" class="form-control" name="linkimgurl">
+            </div>
+       </div>
+       <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon">友链地址</span>
+                <input type="text" class="form-control" name="linkadd">
+            </div>
+       </div>
+       <div class="col-md-6">
+            <input class="reset" type="reset">
+       </div>
+       <div class="col-md-6">
+            <input class="submit" type="submit">
+       </div>
+    </form>
+    </div>
+</div>
+
+
+<% include ./footer %>

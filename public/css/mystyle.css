@@ -1,0 +1,123 @@
+body {
+  font: 14px "Helvetica", Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+ul#menu-main>li>a{
+  font-size: 1.3em;
+  font-weight: 700;
+  font-family: Helvetica,Arial,sans-serif;
+}
+#headerwrap {
+  padding-top: 100px;
+}
+/* 自定义样式 */
+.mt10{
+  margin-top: 10px;
+}
+
+.userForm .input-group{
+  margin-top: 10px;
+}
+
+/* 发布文章页 */
+.articleAdd .input-group{
+  margin-top: 10px;
+} 
+
+.articleAdd .content{
+  margin-top: 10px;
+}
+
+.articleAdd .reset{
+  width: 50%;
+  display: block;
+  margin: 10px auto;
+  border:none;
+  font-size: 20px;
+  color:#fff;
+  background: #09c;
+}
+.articleAdd .submit{
+  width: 50%;
+  display: block;
+  margin: 10px auto;
+  border:none;
+  font-size: 20px;
+  color:#fff;
+  background: #09c;
+}
+
+
+/* 文章列表 */
+.articleList img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+.editArticleImg{
+  width: 100%;
+}
+.mask2 img {
+  width: 100%;
+  height: 100%;
+}
+.fenggexian {
+  border-bottom: 1px dashed #000;
+}
+.jianjie {
+  height: 105px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+   margin: 10px 0;
+}
+section#testimonials .blockquote-wrapper-height {
+  height: 200px;
+}
+section#testimonials {
+  height: 200px;
+}
+.chang_left {
+  margin-left: 0px;
+  width: 196px;
+}
+.chang_left p {
+  text-align: center;
+}
+.border-show {
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.3);
+}
+.change_index_link_h3 {
+  color: #fff;
+}
+#change_display {
+  display: block;
+  color: #666;
+}
+#change_display:hover {
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+
+#form-username-yes {
+  color: green;
+  font-size: 10px;
+  margin-left: 10px;
+  position: absolute;
+  display: none;
+}
+
+#form-username-on {
+  color: red;
+  font-size: 10px;
+  margin-left: 10px;
+  position: absolute;
+  display: none;
+}
